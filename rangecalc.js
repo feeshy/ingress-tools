@@ -39,6 +39,16 @@ function quickSelect(btn){
 			res7.options[2].selected = true;
 			res8.options[2].selected = true;
 			break;
+		case "L8x8":
+			res1.options[0].selected = true;
+			res2.options[0].selected = true;
+			res3.options[0].selected = true;
+			res4.options[0].selected = true;
+			res5.options[0].selected = true;
+			res6.options[0].selected = true;
+			res7.options[0].selected = true;
+			res8.options[0].selected = true;
+			break;
 		case "L8+L7":
 			res1.options[0].selected = true;
 			res2.options[1].selected = true;
