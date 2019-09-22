@@ -1,0 +1,95 @@
+/* vertical */
+
+:root {
+	line-height: calc(1.2em + 1.5vh);
+}
+body {
+	margin: 5vh auto;
+}
+footer {
+	vertical-align: middle;
+}
+
+@media (min-height: 480px) {
+	body>:not(nav) { transform: translateY(calc(100vh / 3 - 160px)); }
+	body>div.title, body>div.text, body>div.text-center { min-height: calc(87.5vh - 100vh / 3 + 160px - 1.2rem - 1.5vh); }
+}
+
+/* horizontal */
+
+body {
+	width: 25rem;
+	max-width: 80%;
+}
+hr {
+	width: 33%;
+	border-top: thin dashed gray;
+}
+footer {
+	margin: auto;
+	min-width:18rem;
+	max-width:350px;
+	text-align: center;
+}
+h1, h2 {
+	text-align: center;
+}
+.float {
+	float:left;
+}
+:not(.float) {
+	clear:both;
+}
+
+/* color */
+
+:root {
+	background-color: #000000;
+	color: #ffffff;
+}
+a {
+	color: #ffffff;
+}
+footer {
+	color: #cccccc;
+}
+.undeployed	{
+	border-color:#cccccc;
+}
+select, button {
+	color:#ffffff;
+	border:solid 1px #59FBEA;
+	margin:0 0.25em;
+}
+select {
+	background-color:#0c0c0c;
+}
+button {
+	background-color:#004F4A;
+}
+a:hover {
+	color: #EBBC4A;
+}
+select:hover, select:focus, button:focus, button:hover {
+	border-color:#EBBC4A;
+}
+button:focus, button:hover {
+	background-color:#0F2225;
+}
+
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,400i,700&display=fallback');
+:root, select, option, button {
+	font-family:Exo, "Trebuchet MS", 'Microsoft Yahei UI', '微软雅黑', 'Lantinghei SC', sans-serif;
+	font-variant: tabular-nums;
+}
+.res {
+	color:#00C2FF;
+}
+.enl {
+	color:#28F428;
+}
+@media (max-device-width: 480px) {
+	select, button { font-size:125%; }
+}
