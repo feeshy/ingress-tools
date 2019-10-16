@@ -19,7 +19,7 @@ footer {
 
 body {
 	width: 25rem;
-	max-width: 80%;
+	max-width: 85%;
 }
 hr {
 	width: 33%;
@@ -89,6 +89,9 @@ button:focus, button:hover {
 }
 .enl {
 	color:#28F428;
+}
+.ui a {
+	text-decoration:none;
 }
 @media (max-device-width: 480px) {
 	select, button { font-size:125%; }

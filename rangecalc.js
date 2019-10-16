@@ -1,45 +1,56 @@
-var res1 = document.getElementById("Res1");
-var res2 = document.getElementById("Res2");
-var res3 = document.getElementById("Res3");
-var res4 = document.getElementById("Res4");
-var res5 = document.getElementById("Res5");
-var res6 = document.getElementById("Res6");
-var res7 = document.getElementById("Res7");
-var res8 = document.getElementById("Res8");
+var res0 = document.getElementById("res0");
+var res1 = document.getElementById("res1");
+var res2 = document.getElementById("res2");
+var res3 = document.getElementById("res3");
+var res4 = document.getElementById("res4");
+var res5 = document.getElementById("res5");
+var res6 = document.getElementById("res6");
+var res7 = document.getElementById("res7");
 
-function quickSelect(btn){
+function resPreset(btn){
 	switch(btn){
 		case "L8x1":
-			res1.options[0].selected = true;
-			res2.options[1].selected = true;
+			res0.options[0].selected = true;
+			res1.options[1].selected = true;
+			res2.options[2].selected = true;
 			res3.options[2].selected = true;
-			res4.options[2].selected = true;
+			res4.options[3].selected = true;
 			res5.options[3].selected = true;
-			res6.options[3].selected = true;
+			res6.options[4].selected = true;
 			res7.options[4].selected = true;
-			res8.options[4].selected = true;
 			break;
 		case "L8x2":
+			res0.options[0].selected = true;
+			res1.options[0].selected = true;
+			res2.options[1].selected = true;
+			res3.options[1].selected = true;
+			res4.options[2].selected = true;
+			res5.options[2].selected = true;
+			res6.options[2].selected = true;
+			res7.options[2].selected = true;
+			break;
+		case "L8x3":
+			res0.options[0].selected = true;
 			res1.options[0].selected = true;
 			res2.options[0].selected = true;
 			res3.options[1].selected = true;
 			res4.options[1].selected = true;
-			res5.options[2].selected = true;
+			res5.options[1].selected = true;
 			res6.options[2].selected = true;
 			res7.options[2].selected = true;
-			res8.options[2].selected = true;
 			break;
-		case "L8x3":
+		case "L8x4":
+			res0.options[0].selected = true;
 			res1.options[0].selected = true;
 			res2.options[0].selected = true;
 			res3.options[0].selected = true;
 			res4.options[1].selected = true;
 			res5.options[1].selected = true;
 			res6.options[1].selected = true;
-			res7.options[2].selected = true;
-			res8.options[2].selected = true;
+			res7.options[1].selected = true;
 			break;
 		case "L8x8":
+			res0.options[0].selected = true;
 			res1.options[0].selected = true;
 			res2.options[0].selected = true;
 			res3.options[0].selected = true;
@@ -47,88 +58,90 @@ function quickSelect(btn){
 			res5.options[0].selected = true;
 			res6.options[0].selected = true;
 			res7.options[0].selected = true;
-			res8.options[0].selected = true;
 			break;
 		case "L8+L7":
-			res1.options[0].selected = true;
+			res0.options[0].selected = true;
+			res1.options[1].selected = true;
 			res2.options[1].selected = true;
-			res3.options[1].selected = true;
+			res3.options[2].selected = true;
 			res4.options[2].selected = true;
 			res5.options[2].selected = true;
 			res6.options[2].selected = true;
-			res7.options[2].selected = true;
-			res8.options[3].selected = true;
+			res7.options[3].selected = true;
 			break;
 	}
+	calculate();
 }
 
-var mod1 = document.getElementById("Mod1");
-var mod2 = document.getElementById("Mod2");
-var mod3 = document.getElementById("Mod3");
-var mod4 = document.getElementById("Mod4");
+var mod0 = document.getElementById("mod0");
+var mod1 = document.getElementById("mod1");
+var mod2 = document.getElementById("mod2");
+var mod3 = document.getElementById("mod3");
 
-mod1.onchange = function(){
-	var selectIndex = mod1.selectedIndex;
-	if (mod1.options[selectIndex].value == "1") {
-		mod2.disabled = true;
-		mod2.setAttribute("class","undeployed");
-		mod2.options[3].selected = true;
-		mod3.disabled = true;
-		mod3.setAttribute("class","undeployed");
-		mod3.options[3].selected = true;
-		mod4.disabled = true;
-		mod4.setAttribute("class","undeployed");
-		mod4.options[3].selected = true;
-	}else{
-		mod2.disabled = false;
-		mod2.removeAttribute("class");
+function laPreset(btn){
+	switch(btn){
+		case "LAx2":
+			mod0.options[2].selected = true;
+			mod1.options[2].selected = true;
+			mod2.options[6].selected = true;
+			mod3.options[6].selected = true;
+			break;
+		case "SBULx2":
+			mod0.options[1].selected = true;
+			mod1.options[1].selected = true;
+			mod2.options[6].selected = true;
+			mod3.options[6].selected = true;
+			break;
+		case "LAx4":
+			mod0.options[2].selected = true;
+			mod1.options[2].selected = true;
+			mod2.options[2].selected = true;
+			mod3.options[2].selected = true;
+			break;
+		case "SBULx4":
+			mod0.options[1].selected = true;
+			mod1.options[1].selected = true;
+			mod2.options[1].selected = true;
+			mod3.options[1].selected = true;
+			break;
+		case "Reset":
+			mod0.options[6].selected = true;
+			mod1.options[6].selected = true;
+			mod2.options[6].selected = true;
+			mod3.options[6].selected = true;
+			break;
 	}
+	calculate();
 }
 
-mod2.onchange = function(){
-	var selectIndex = mod2.selectedIndex;
-	if (mod2.options[selectIndex].value == "0") {
-		mod3.disabled = true;
-		mod3.setAttribute("class","undeployed");
-		mod3.options[3].selected = true;
-		mod4.disabled = true;
-		mod4.setAttribute("class","undeployed");
-		mod4.options[3].selected = true;
-	}else{
-		mod3.disabled = false;
-		mod3.removeAttribute("class");
+function sortNumber(a,b) {
+		return b - a;
 	}
-}
-
-mod3.onchange = function(){
-	var selectIndex = mod3.selectedIndex;
-	if (mod3.options[selectIndex].value == "0") {
-		mod4.disabled = true;
-		mod4.setAttribute("class","undeployed");
-		mod4.options[3].selected = true;
-	}else{
-		mod4.disabled = false;
-		mod4.removeAttribute("class");
-	}
-}
 
 function calculate(){
-	var sumRes = 
-	parseInt(res1.options[res1.selectedIndex].value) +
-	parseInt(res2.options[res2.selectedIndex].value) +
-	parseInt(res3.options[res3.selectedIndex].value) +
-	parseInt(res4.options[res4.selectedIndex].value) +
-	parseInt(res5.options[res5.selectedIndex].value) +
-	parseInt(res6.options[res6.selectedIndex].value) +
-	parseInt(res7.options[res7.selectedIndex].value) +
-	parseInt(res8.options[res8.selectedIndex].value);
-	var sumMod = 
-	Number(mod1.options[mod1.selectedIndex].value) +
-	Number(mod2.options[mod2.selectedIndex].value) +
-	Number(mod3.options[mod3.selectedIndex].value) +
-	Number(mod4.options[mod4.selectedIndex].value);
-	if (sumRes > 0) {
-		var range = parseInt(160 * Math.pow(sumRes/8 , 4) * sumMod / 1000);
+	var resLvl = 
+		Number(res0.options[res0.selectedIndex].value) +
+		Number(res1.options[res1.selectedIndex].value) +
+		Number(res2.options[res2.selectedIndex].value) +
+		Number(res3.options[res3.selectedIndex].value) +
+		Number(res4.options[res4.selectedIndex].value) +
+		Number(res5.options[res5.selectedIndex].value) +
+		Number(res6.options[res6.selectedIndex].value) +
+		Number(res7.options[res7.selectedIndex].value);
+	var la = new Array(4);
+		la[0] = Number(mod0.options[mod0.selectedIndex].value);
+		la[1] = Number(mod1.options[mod1.selectedIndex].value);
+		la[2] = Number(mod2.options[mod2.selectedIndex].value);
+		la[3] = Number(mod3.options[mod3.selectedIndex].value);
+	la.sort(sortNumber);
+	var laFactor = la[0] + la[1] / 4 + la[2] / 8 + la[3] / 8;
+	if (laFactor == 0) {
+		laFactor = 1;
+	}
+	if (resLvl > 0) {
+		var range = parseInt(1.6 * Math.pow(resLvl/8 , 4) * laFactor) / 10;
 		document.getElementById("range").innerHTML = range;
 	}
 }
+
+document.addEventListener("change", calculate);
