@@ -1,13 +1,30 @@
 <!DOCTYPE html>
-<html lang="en-us">
 
+<html lang="en-us">
 <head>
-	<meta content="en-us" http-equiv="Content-Language">
-	<meta charset=utf-8 />
-	<meta name="viewport" content="width=device-width, viewport-fit=cover" />
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<title>Portal Calc</title>
-	<link rel="stylesheet" href="style.css" />
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Portal Range Calculator</title>
+    <meta name="keywords" content="ingress, portal, range, calculator">
+    <meta name="description" property="og:description" content="a portal range calculator for planning long distance links.">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ebbc4a">
+	<meta name="msapplication-TileColor" content="#004F4A">
+	<meta name="theme-color" content="#000000">
+
+    <link rel="stylesheet" href="style.css">
+	<script>
+		if ('serviceWorker' in navigator) {
+	    	navigator.serviceWorker.register('service-worker.js');
+		}
+	</script>
 	<script src="rangecalc.js" async></script>
 </head>
 
@@ -32,16 +49,10 @@
 			<span class="float"><button onclick="laPreset('LAx2');">LAx2</button><button onclick="laPreset('SBULx2');">SBULx2</button></span><span class="float"><button onclick="laPreset('LAx4');">LAx4</button><button onclick="laPreset('SBULx4');">SBULx4</button></span><span class="float"><button onclick="laPreset('Reset');">Reset</button></span>
 		</p><br>
 	</section><hr>
-	<section>
-		<h2><u id="range">&nbsp;&nbsp;&nbsp;</u> km</h2>
+	<section style="text-align: center;">
+		<h3><u id="range">&nbsp;&nbsp;&nbsp;</u> km</h3>
 	</section>
-</div><br>
-
-<footer style="font-size:smaller; line-height:1.5em;"><i>
-	* You can fork this page on <a href='https://github.com/feeshy/portal_calc_html' target='_blank'>github</a><br>
-	** There is also a <a href="https://docs.google.com/spreadsheets/d/1k7E8HFnY7CE5r2mdPsAdUYwGo93zK4YSYCLVeZGnNEo/edit?usp=sharing" target="_blank">spreadsheet</a> version<br>
-	*** NOT associated with Niantic or Ingress
-</i></footer><br><br>
-
+</div>
+<footer><a href="./">back</a> | <a href='https://github.com/feeshy/ingress-calc' target='_blank'>github</a></footer>
 </body>
 </html>

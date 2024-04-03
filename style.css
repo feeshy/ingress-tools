@@ -25,6 +25,7 @@ hr {
 	width: 33%;
 	border-top: thin dashed gray;
 }
+
 footer {
 	margin: auto;
 	min-width:18rem;
@@ -45,6 +46,7 @@ h1, h2 {
 
 :root {
 	background-color: #000000;
+	background-image: url("real-carbon-fibre.png");
 	color: #ffffff;
 }
 a {
@@ -79,7 +81,7 @@ button:focus, button:hover {
 
 /* fonts */
 
-@import url('https://fonts.googleapis.com/css?family=Exo:400,400i,700&display=fallback');
+@import url('https://fonts.googleapis.com/css?family=Exo:400,400i,700&display=swap');
 :root, select, option, button {
 	font-family:Exo, "Trebuchet MS", 'Microsoft Yahei UI', '微软雅黑', 'Lantinghei SC', sans-serif;
 	font-variant: tabular-nums;
