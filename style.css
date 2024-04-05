@@ -82,9 +82,12 @@ button:focus, button:hover {
 
 /* fonts */
 
-/* @import url('https://fonts.googleapis.com/css?family=Exo:400,400i,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Exo:400,400i,700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap')
+body {
+	font-family: "Inter", "Exo 2", "Exo", "Trebuchet MS", sans-serif;
+}
 
 /* Manolo Mono
 Open Source Font Provided by Asilos Magdalena
@@ -96,12 +99,8 @@ https://asilosmagdalena.gumroad.com/l/MANOLO_MONO */
 	src: url('manolo-mono.ttf') format('truetype');
 }
 
-body {
-	font-family: "Inter", "Exo 2", "Exo", "Trebuchet MS", sans-serif;
-}
-
 h1, h2, h3, h4, h5, h6, code, select, option, button {
-	font-family: "Manolo Mono", monospace;
+	font-family: 'Manolo Mono', monospace;
 	font-variant: tabular-nums;
 }
 .res {
@@ -110,6 +109,7 @@ h1, h2, h3, h4, h5, h6, code, select, option, button {
 .enl {
 	color:#28F428;
 }
+
 @media (max-device-width: 480px) {
 	select, button { font-size:125%; }
 }
