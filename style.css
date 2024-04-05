@@ -81,9 +81,20 @@ button:focus, button:hover {
 
 /* fonts */
 
-@import url('https://fonts.googleapis.com/css?family=Exo:400,400i,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Exo:400,400i,700&display=swap'); */
+
+
+/* Manolo Mono
+Open Source Font Provided by Asilos Magdalena
+Free For Personal and Commercial Use.
+https://asilosmagdalena.gumroad.com/l/MANOLO_MONO */
+@font-face {
+	font-family: 'manolo-mono';
+	src: url('manolo-mono.ttf') format('truetype');
+}
+
 :root, select, option, button {
-	font-family:Exo, "Trebuchet MS", 'Microsoft Yahei UI', '微软雅黑', 'Lantinghei SC', sans-serif;
+	font-family: "Manolo Mono", "Exo 2", "Exo", "Trebuchet MS", 'Microsoft Yahei UI', '微软雅黑', 'Lantinghei SC', sans-serif;
 	font-variant: tabular-nums;
 }
 .res {
