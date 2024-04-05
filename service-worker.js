@@ -3,7 +3,7 @@
 
   // configuration
 const
-  version = '2024.4.03',
+  version = '2024.4.5',
   CACHE = version + '::PWAsite',
   offlineURL = 'https://feeshy.github.io/ingress-calc/',
   installFilesEssential = [
@@ -15,7 +15,7 @@ const
     'style.css'
   ].concat(offlineURL),
   installFilesDesirable = [
-
+    'manolo-mono.ttf'
   ];
 
   ///////////////////////////////////
