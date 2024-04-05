@@ -10,9 +10,9 @@ footer {
 	vertical-align: middle;
 }
 
-@media (min-height: 480px) {
-	body>:not(nav) { transform: translateY(calc(100vh / 3 - 160px)); }
-	body>div.title, body>div.text, body>div.text-center { min-height: calc(87.5vh - 100vh / 3 + 160px - 1.2rem - 1.5vh); }
+@media (min-height: 640px) {
+	body>:not(nav) { transform: translateY(calc(100vh / 2.5 - 256px)); }
+	body>div.title, body>div.text, body>div.text-center { min-height: calc(87.5vh - 100vh / 2.5 + 256px - 1.2rem - 1.5vh); }
 }
 
 /* horizontal */
@@ -99,10 +99,14 @@ https://asilosmagdalena.gumroad.com/l/MANOLO_MONO */
 	src: url('manolo-mono.ttf') format('truetype');
 }
 
-h1, h2, h3, h4, h5, h6, code, select, option, button {
+h1, h2, h3, h4, h5, h6, code {
 	font-family: 'Manolo Mono', monospace;
+}
+
+code, select, option, button {
 	font-variant: tabular-nums;
 }
+
 .res {
 	color:#00C2FF;
 }
