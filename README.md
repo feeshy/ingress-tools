@@ -10,5 +10,5 @@ Other features might be added later, or maybe not, it depends if I lost my inter
 
 ### link range
 
-- [pwa](https://feeshy.github.io/ingress-calc/range)
+- [pwa](https://feeshy.github.io/ingress-tools/range)
 - [spreadsheet](https://docs.google.com/spreadsheets/d/1k7E8HFnY7CE5r2mdPsAdUYwGo93zK4YSYCLVeZGnNEo/)
