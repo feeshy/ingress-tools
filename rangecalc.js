@@ -139,7 +139,7 @@ function calculate(){
 		laFactor = 1;
 	}
 	if (resLvl > 0) {
-		var range = parseInt(1.6 * Math.pow(resLvl/8 , 4) * laFactor) / 10;
+		var range = parseInt(16 * Math.pow(resLvl/8 , 4) * laFactor) / 100;
 		document.getElementById("range").innerHTML = range;
 	}
 }
