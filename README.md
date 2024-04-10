@@ -1,6 +1,6 @@
-# Ingress Calculator PWA
+# Ingress Toolsulator PWA
 
-An ingress calculator implemented with PWA (Progress Web Apps), which has the ability to run completely offline.
+An Ingress Toolsulator implemented with PWA (Progress Web Apps), which has the ability to run completely offline.
 
 So far, there is only a portal range calculator for planning long distance links.
 

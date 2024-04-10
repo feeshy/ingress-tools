@@ -1,7 +1,7 @@
 {
-    "name": "Ingress Calc",
-    "short_name": "Ingress Calc",
-    "start_url": "https://feeshy.github.io/ingress-calc/",
+    "name": "Ingress Tools",
+    "short_name": "Ingress Tools",
+    "start_url": "https://feeshy.github.io/ingress-tools/",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
