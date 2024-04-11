@@ -1,6 +1,6 @@
 # Ingress Tools PWA
 
-![](android-chrome-512x512.png)
+![](apple-touch-icon.png)
 
 [Ingress](https://ingress.com/) Tools implemented with PWA (Progress Web Apps), which has the ability to run completely offline.
 
