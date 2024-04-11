@@ -1,6 +1,8 @@
 # Ingress Tools PWA
 
-Ingress Tools implemented with PWA (Progress Web Apps), which has the ability to run completely offline.
+![](android-chrome-512x512.png)
+
+[Ingress](https://ingress.com/) Tools implemented with PWA (Progress Web Apps), which has the ability to run completely offline.
 
 So far, there is only a portal range calculator for planning long distance links.
 
