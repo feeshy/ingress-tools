@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 720 720">
+  <path class="gray" d="m357 34 278 164v324L361 688 85 522V198L357 34Zm1 47L124 222v275l237 142 235-143 1-272L358 81Z"/>
+  <path class="color" d="m358 75 243 145v279L361 645 120 501V218L358 75Zm-1 43-129 79 262-1-133-78Zm208 163L390 585l176-105-1-199Zm-410 1v198l177 106-177-304Z"/>
+  <path class="gray" d="M166 229h388L361 562 166 230v-1Z"/>
+  <path class="color" d="m293 378 35 1 32 54 32-54h36l-67 117-68-118Z"/>
+  <path class="color" d="M224 261h272l-14 24-245-1-13-23ZM257 316h207l-18 32-171-1-18-31Z"/>
+</svg>
+<style>
+.color { fill:#ebbc4a; }
+@media (prefers-color-scheme: light) { .gray { fill: whitesmoke; } }
+@media (prefers-color-scheme: dark) { .gray { fill: slategray; } }
+</style>
+</svg>

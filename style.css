@@ -1,37 +1,30 @@
-/* vertical */
+/* layout */
 
-:root {
+html {
+	height: 100vh;
 	line-height: calc(1.2em + 1.5vh);
 }
 body {
-	margin: 5vh auto;
+	margin: 0 auto;
+	width: 25rem;
+	max-width: 90%;
+	position: relative;
+	min-height: 100%;
 }
 footer {
-	vertical-align: middle;
+	position: absolute;
+	bottom: 5vh;
+	left: 0;
+	right: 0;
+	max-width:350px;
+	text-align: center;
 }
 
-@media (min-height: 640px) {
-	body>:not(nav) { transform: translateY(calc(100vh / 2.5 - 256px)); }
-	body>div.title, body>div.text, body>div.text-center { min-height: calc(87.5vh - 100vh / 2.5 + 256px - 1.2rem - 1.5vh); }
-}
-
-/* horizontal */
-
-body {
-	width: 25rem;
-	max-width: 85%;
-}
 hr {
 	width: 33%;
 	border-top: thin dashed gray;
 }
 
-footer {
-	margin: auto;
-	min-width:18rem;
-	max-width:350px;
-	text-align: center;
-}
 h1, h2 {
 	text-align: center;
 }
@@ -44,8 +37,9 @@ h1, h2 {
 
 /* color */
 
-:root {
-	background-color: #000000;
+html {
+	color-scheme: dark;
+	background-color: #0f0f0f;
 	background-image: url("real-carbon-fibre.png");
 	color: #ffffff;
 }
