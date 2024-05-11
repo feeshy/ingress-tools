@@ -3,9 +3,9 @@
 
   // configuration
 const
-  version = '2024.4.5',
+  version = '2024.5.11',
   CACHE = version + '::PWAsite',
-  offlineURL = 'https://feeshy.github.io/ingress-calc/',
+  offlineURL = 'https://feeshy.github.io/ingress-tools/',
   installFilesEssential = [
     'index.html',
     'manifest.json',
