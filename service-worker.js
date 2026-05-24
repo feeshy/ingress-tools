@@ -1,93 +1,55 @@
-  // Thank CaelumTian for translating the following tutorial:
-  // https://caelumtian.github.io/2017/08/23/%E8%AF%91-%E5%B0%86%E4%BD%A0%E7%9A%84%E7%BD%91%E7%AB%99%E5%8D%87%E7%BA%A7%E4%B8%BAPWA/#%E6%AD%A5%E9%AA%A43%EF%BC%9A%E5%88%9B%E5%BB%BAService-Worker
+const VERSION = 'BUILD_TIME_PLACEHOLDER';
+const CACHE_NAME = 'ingress-tools-cache-v' + VERSION;
 
-  // configuration
-const
-  version = '2024.5.11',
-  CACHE = version + '::PWAsite',
-  offlineURL = 'https://feeshy.github.io/ingress-tools/',
-  installFilesEssential = [
-    'index.html',
-    'manifest.json',
-    'service-worker.js',
-    'rangecalc.html',
-    'rangecalc.js',
-    'style.css'
+// 核心资产：包含你列出的核心文件
+const ESSENTIAL_FILES = [
+  './',
+  './index.html',
+  './manifest.json',
+  './rangecalc.html',
+  './rangecalc.js',
+  './style.css',
   ].concat(offlineURL),
   installFilesDesirable = [
     'manolo-mono.ttf'
   ];
 
-  ///////////////////////////////////
-  // install static assets
-function installStaticFiles() {
-    return caches.open(CACHE)
-      .then(cache => {
-        // cache desirable files
-        cache.addAll(installFilesDesirable);
-        // cache essential files
-        return cache.addAll(installFilesEssential);
-      });
-  }
-
-  // application installation
-self.addEventListener('install', event => {
-    console.log('service worker: install');
-    // cache core files
-    event.waitUntil(
-      installStaticFiles()
-      .then(() => self.skipWaiting())
-    );
-  }); 
-
-  /////////////////////////////
-  // clear old caches
-function clearOldCaches() {
-    return caches.keys()
-      .then(keylist => {
-        return Promise.all(
-          keylist
-            .filter(key => key !== CACHE)
-            .map(key => caches.delete(key))
-        );
-      });
-  }
-  // application activated
-  self.addEventListener('activate', event => {
-    console.log('service worker: activate');
-      // delete old caches
-    event.waitUntil(
-      clearOldCaches()
-      .then(() => self.clients.claim())
+// 1. 安装阶段
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      return Promise.all(
+        ESSENTIAL_FILES.map((url) =>
+          cache.add(url).catch((err) => console.warn('Precache failed:', url, err))
+        )
       );
-  });
+    }).then(() => self.skipWaiting())
+  );
+});
 
-  ///////////////////////////////
-  // application fetch network data
-self.addEventListener('fetch', event => {
-    // abandon non-GET requests
-    if (event.request.method !== 'GET') return;
-    let url = event.request.url;
-    event.respondWith(
-      caches.open(CACHE)
-        .then(cache => {
-          return cache.match(event.request)
-            .then(response => {
-              if (response) {
-                // return cached file
-                console.log('cache fetch: ' + url);
-                return response;
-              }
-              // make network request
-              return fetch(event.request)
-                .then(newreq => {
-                  console.log('network fetch: ' + url);
-                  if (newreq.ok) cache.put(event.request, newreq.clone());
-                  return newreq;
-                })
-                // app is offline
-                .catch(() => offlineAsset(url));
-            });
-        })
-    );
-  });
+// 2. 激活阶段：自动清理过期缓存
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((keys) => {
+      return Promise.all(
+        keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
+      );
+    }).then(() => self.clients.claim())
+  );
+});
+
+// 3. 运行时策略：StaleWhileRevalidate
+self.addEventListener('fetch', (event) => {
+  if (event.request.method !== 'GET') return;
+  if (!event.request.url.startsWith(self.location.origin)) return;
+  event.respondWith(
+    caches.open(CACHE_NAME).then(async (cache) => {
+      const fetchPromise = fetch(event.request).then((networkResponse) => {
+        cache.put(event.request, networkResponse.clone());
+        return networkResponse;
+      }).catch(() => { });
+      const cachedResponse = await cache.match(event.request);
+      return cachedResponse || fetchPromise;
+    })
+  );
+});
