@@ -1,7 +1,8 @@
 {
     "name": "Ingress Tools",
     "short_name": "Ingress Tools",
-    "start_url": "https://feeshy.github.io/ingress-tools/",
+    "scope" : "/ingress-tools/",
+    "start_url": "/ingress-tools/range",
     "icons": [
         {
             "src": "icon-192.png",
