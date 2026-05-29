@@ -1,16 +1,10 @@
-# Ingress Tools PWA
+# Ingress Link Calc
 
-![](apple-touch-icon.png)
+<object data="favicon.svg" type="image/svg+xml" width="120" height="120">
+  <img src="favicon.png" alt="icon">
+</object>
 
-[Ingress](https://ingress.com/) Tools implemented with PWA (Progress Web Apps), which has the ability to run completely offline.
+An [Ingress](https://ingress.com/) portal range calculator for planning long distance links, implemented with PWA (Progress Web Apps)
 
-So far, there is only a portal range calculator for planning long distance links.
-
-Other features might be added later, or maybe not, it depends if I lost my interest. But you can definitely contribute to this project, and I'll view all pull requests.
-
-## Features
-
-### link range
-
-- [pwa](https://feeshy.github.io/ingress-tools/range)
+- [pwa](https://ingress.feeshy.top/)
 - [spreadsheet](https://docs.google.com/spreadsheets/d/1k7E8HFnY7CE5r2mdPsAdUYwGo93zK4YSYCLVeZGnNEo/)

@@ -1,20 +1,19 @@
 {
-    "name": "Ingress Tools",
-    "short_name": "Ingress Tools",
-    "scope" : "/ingress-tools/",
-    "start_url": "/ingress-tools/range",
+    "name": "Ingress Link Calc",
+    "short_name": "Ingress Link Calc",
+    "start_url": "/",
     "icons": [
         {
-            "src": "icon-192.png",
-            "sizes": "192x192",
-            "type": "image/png",
+            "src": "favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
             "purpose": "any"
         },
         {
-            "src": "icon-512.png",
-            "sizes": "512x512",
+            "src": "icon-maskable-180.png",
+            "sizes": "180x180",
             "type": "image/png",
-            "purpose": "any"
+            "purpose": "maskable"
         },
         {
             "src": "icon-maskable-192.png",
