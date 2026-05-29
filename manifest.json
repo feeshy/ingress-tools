@@ -1,6 +1,6 @@
 {
-    "name": "Ingress Link Calc",
-    "short_name": "Ingress Link Calc",
+    "name": "Ingress Calc",
+    "short_name": "Ingress Calc",
     "start_url": "/",
     "icons": [
         {
