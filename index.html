@@ -3,23 +3,50 @@
 <html lang="en-us">
 
 <head>
-  <meta charset=utf-8>
-  <title>Ingress Calculator</title>
-  <meta name="keywords" content="ingress, portal, range, calculator">
-  <meta name="description" property="og:description"
-    content="an ingress portal range calculator for planning long distance links.">
+  <meta charset="utf-8">
+  <title>Ingress Portal Range Calculator & Link Distance Planner</title>
+  <meta name="description" content="A handy Ingress Intel companion tool for long-range link planning. Check maximum linkable distances and check multipliers for Link Amps or SoftBank Ultra Links.">
+  <meta name="keywords" content="ingress link distance calculator, ingress tools, ingress portal range, link planner, link amp, sbul, ingress intel">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0f0f0f">
+
+  <link rel="canonical" href="https://ingress.feeshy.top/">
+
+  <meta property="og:title" content="Ingress Portal Range Calculator & Link Distance Planner">
+  <meta property="og:description" content="A handy Ingress Intel companion tool for long-range link planning. Check maximum linkable distances and check multipliers for Link Amps or SoftBank Ultra Links.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ingress.feeshy.top/">
+
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="manifest" href="manifest.json">
+
   <link rel="stylesheet" href="style.css">
   <script src="rangecalc.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Ingress Calc",
+    "alternateName": "Ingress Portal Range Calculator",
+    "url": "https://ingress.feeshy.top/",
+    "applicationCategory": "ToolApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript. Requires HTML5.",
+    "description": "An Ingress companion tool for calculating portal link distances and planning maximum ranges with modifier multipliers.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
 </head>
 
 <body>
   <br>
   <div id="rangecalc">
-    <h2>Ingress Calculator</h2>
+    <h1>Ingress Calc</h1>
     <section>
       <h3>Resonators</h3>
       <form id="res">
